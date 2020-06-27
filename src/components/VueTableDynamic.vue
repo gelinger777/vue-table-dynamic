@@ -64,7 +64,8 @@
                 <span 
                   class="table-cell-content" 
                   :style="{ whiteSpace: whiteSpace, wordWrap: wordWrap, textOverflow: textOverflow }"
-               v-html="tableCell.data" >
+              >
+              <div  v-html="tableCell.data"></div>
                 
                 </span>
                 <span v-if="sortConfig[j]" class="table-sort flex-dir-column" :style="{ height: '30px' }">
@@ -158,9 +159,9 @@
                     :id="tableCell.key"
                     @blur="onCellBlur(tableCell, tableRow.index, j)"
                     @keydown.enter.stop.prevent="onCellKeyEnter"
-                     v-html="tableCell.data" >
+                     >
                 
-                
+                      <div  v-html="tableCell.data"></div>
                  
                   </span>
                 </div>
@@ -215,8 +216,8 @@
                 <span 
                   class="table-cell-content" 
                   :style="{ whiteSpace: whiteSpace, wordWrap: wordWrap, textOverflow: textOverflow }"
-               v-html="tableCell.data" >
-                
+               >
+                <div v-html="tableCell.data"></div>
                 </span>
                 <span v-if="sortConfig[j]" class="table-sort flex-dir-column" :style="{ height: '30px' }">
                   <i 
@@ -298,8 +299,8 @@
                       :id="tableCell.key"
                       @blur="onCellBlur(tableCell, tableRow.index, j)"
                       @keydown.enter.stop.prevent="onCellKeyEnter"
-                       v-html="tableCell.data" >
-                
+                      >
+                  <div v-html="tableCell.data"></div>
                 
                     </span>
                   </div>
